@@ -1,0 +1,24 @@
+
+List of Facebook friends: 
+  <div *ngFor="let follower of followersMap.Facebook">
+    <span>{{follower}}</span>
+  </div>
+<hr>
+List of Twitter friends: 
+  <div *ngFor="let follower of followersMap.Twitter">
+    <span>{{follower}}</span>
+  </div>
+<hr>
+
+
+<div *ngIf="!platform">
+  Getting current platform to send promotions...  
+</div>
+
+<h1 *ngIf="platform">
+  Trending platform: {{platform}}
+</h1>
+
+<div *ngIf="name">
+  Send promotional message to <strong>{{name}}</strong>
+</div>
