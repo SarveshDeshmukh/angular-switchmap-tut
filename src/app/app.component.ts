@@ -48,6 +48,9 @@ export class AppComponent  {
       concatMap( x => of(x).pipe(delay(2000))),
     );
   }
+  /**
+   * Subscribes to the treding platform stream and starts sending        messages. As soon as the trend changes, SwitchMap helps us unsubscribe from the previous trend and subscibe to the new trend to send mesages.
+   */
 
   private sendPromotions() {
     let subscription;
